@@ -12,8 +12,8 @@ cv2.imwrite('output/whiteImg.png', whiteImg)
 gray = cv2.cvtColor(pic, cv2.COLOR_BGR2GRAY)
 cv2.imwrite("output/grey.png", gray)
 # Apply Threshold
-thresh = np.array(255 * (gray / 255) ** 1 , dtype='uint8')
-cv2.imwrite("output/greyImgGamaCorrelation.png", thresh)
+#thresh = np.array(255 * (gray / 255) ** 1 , dtype='uint8')
+#cv2.imwrite("output/greyImgGamaCorrelation.png", thresh)
 ret,thresh = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV+ cv2.THRESH_OTSU)
 cv2.imwrite('output/otsus.png',thresh)
 # Apply Horizontal Projection
